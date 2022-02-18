@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서버 측으로 전송 되는 데이터 형식</title>
+</head>
+<body>
+    <h1>기본 데이터 전송 타입은 모두 문자형식(String, str)</h1>
+    <form action="">
+        <label for="">날짜를 입력할 수 있음</label><br>
+        <input type="date" name="today" id="" value=""><br>
+        <input type="date" name="that_day" id="" value="2021-09-20"><br>
+        <button type="submit">전송 데이터 확인</button>
+    </form>
+    <hr>
+    <form action="">
+        <label for="">현지 날짜/시간</label>
+        <input type="datetime-local" name="now" id=""><br>
+        <button type="submit">전송 데이터 확인</button>
+    </form>
+    <hr>
+    <form action="">
+        <label for="">색상 코드</label>
+        <input type="color" name="clr" id=""><br>
+        <button type="submit">전송 데이터 확인</button>
+    </form>
+    <hr>
+    <form action="">
+        <label for="">슬라이더 컨트롤 (숫자~숫자)</label>
+        <input type="range" name="ran" id="" value=""
+        min="1" max="100" step="5"><br>
+        <button type="submit">전송 데이터 확인</button>
+    </form>
+    <hr>
+    <form action="">
+        <label for="">숨김 처리</label>
+        <input type="hidden" id="hid" name="pageNum" value="11"><br>
+        <button type="submit">전송 데이터 확인</button>
+    </form>
+</body>
+</html>

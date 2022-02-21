@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            border-width: 5px;
+            border-style: dashed;
+            border-color: fuchsia;
+        }
+        ul {
+            border: 3px double goldenrod;
+        }
+        ol li:first-child{
+            border-top: 5px solid red;
+            border-right: 10px double goldenrod;
+            border-bottom: 15px dashed darkturquoise;
+            border-left: 20px groove hotpink;
+            
+        }
+        ol li:last-child{
+            border: 5px solid greenyellow;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 25px;
+        }
+        #d1{
+            width: 300px;
+            height: 200px;
+            border-top-width: 10px;
+            border-right-width: 20px;
+            border-bottom-width: 10px;
+            border-left-width: 20px;
+            border-top-style: solid;
+            border-right-style: ridge;
+            border-bottom-style: outset;
+            border-left-style: groove;
+            border-top-color: greenyellow;
+            border-right-color: indianred;
+            border-bottom-color: indigo;
+            border-left-color: blue;
+        }
+        #d2{
+            width: 500px;
+            height: 300px;
+            border-width: 10px 20px 30px 40px;
+            border-style: groove double dotted dashed;
+            border-color: indigo greenyellow goldenrod indianred;
+            border-radius: 5px 10px 15px 20px;
+        }
+        #d3{
+            width: 500px;
+            height: 300px;
+            border-width: 10px 30px;
+            border-style: groove dashed;
+            border-color: goldenrod indianred;
+            border-radius: 10px 20px;
+        }
+        #d4{
+            width: 500px;
+            height: 300px;
+            border-width: 10px 50px 30px;
+            border-style: groove solid dashed;
+            border-color: goldenrod blue indianred;
+            border-radius: 5px 30px 20px;
+        }
+        div{
+            margin: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>border는 태그가 생성될 때 기본값이 0이다.</h1>
+    <ul>
+        <li>경계선에 스타일링을 할 때는</li>
+        <li>가장 먼저 경계선의 두께</li>
+        <li>그리고 경계선의 종류(타입)이 지정되어야 한다</li>
+        <li>잘 생각해보면 색을 넣을 때에는 대상이 분명해야함과 같은 원리</li>
+    </ul>
+    <ol>
+        <li>상하좌우의 각 방면을 개별적으로 스타일링 할 수 있음</li>
+        <li>모서리도 개별적으로 스타일링 가능</li>
+    </ol>
+    <h3>경계선의 스타일링은 각 방면의 스타일링을 지정할 수 있는 프로퍼티들이 모두 존재한다</h3>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <div id="d4"></div>
+</body>
+</html>

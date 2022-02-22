@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            border: 1px solid blue;
+            text-align: justify;
+        }
+        p{
+            border: 1px solid greenyellow;
+        }
+        span{
+            border: 1px solid rebeccapurple;
+            text-decoration: overline; 
+        }
+        h2{
+            text-align: left;
+        }
+        h3{
+            text-align: center;
+        }
+        h4{
+            text-align: right;
+        }
+        #va{
+            width: 50%;
+            height: 500px;
+            border: 1px solid red;
+            vertical-align: middle;
+            line-height: 500px;
+        }
+        #sp{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <h1>text-align:은 정렬할 공간이 반드시 필요!</h1>
+    <h2>좌측 정렬(default)</h2>
+    <h3>가운데 정렬</h3>
+    <h4>우측 정렬</h4>
+    <h1>justify는 특수한 경우에 사용(신문기사 같은거)</h1>
+    <div>
+        <p>
+            center alignment dfsefsdfsdfsdfsfdsdfsfds
+            fdsfdsfdsfdsdfsfdsdfsfdsdfsdfsdf sdfsfdsdfsdfsdfsdfs dfsefsdfsdfsdfsfdsdfsfdsfds
+            fdsfdsfdsdfsfdsdfsfdsdfsdfsdf
+        </p>
+    </div>
+    <hr>
+    <div>
+    justify는 단어별로 끊어주는 역할 dfsefsdfsdfsdfsfdsdfsfdsfdsfdsfdsfdsdfsfdsdfsfdsdfsdfsdf sdfsfdsdfsdfsdfsdfs dfsefsdfsdfsdfsfdsdfsfdsfdsfdsfdsfdsdfsfdsdfsfdsdfsdfsdf
+</div>
+<hr>
+<h1>Text Vertical Align(수직정렬)</h1>
+<div id="va">
+    <span id="sp"> Text Vertical Align</span>
+</div>
+</body>
+</html>

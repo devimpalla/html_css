@@ -1,0 +1,23 @@
+
+div{
+    text-align: center;
+    
+}
+  h1{
+      border: 5px solid black;
+      display: inline;
+      box-sizing: border-box;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: xx-large;
+  }
+    a{
+      text-align: center;
+      text-decoration: none;
+  }
+  #index{
+      word-spacing: 30px;
+  }
+  .bolder{
+      font-weight: bolder;
+  }

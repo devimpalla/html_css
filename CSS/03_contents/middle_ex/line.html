@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul{
+            border: 1px solid black;
+            padding: 5px;
+            width: 77%;
+        }
+        li{
+            display: inline-block;
+            margin: 0;
+            padding: 10px;
+            text-align: center;
+        }
+        li:nth-child(2n+1){
+            background-color: brown;
+        }
+        li:nth-child(2n){
+            background-color: red;
+        }
+        li:nth-child(1){
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+        li:nth-child(7){
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>첫 번째</li><li>두 번째</li><li>세 번째</li><li>네 번째</li><li>다섯 번째</li><li>여섯 번째</li><li>일곱 번째</li>
+    </ul>
+</body>
+</html>

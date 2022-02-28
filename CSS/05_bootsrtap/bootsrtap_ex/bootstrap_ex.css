@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.navbar-brand {
+  left: 5px;
+}
+.carousel-item {
+  height: 400px;
+}
+.carousel-inner > div:first-child {
+  background-image: url(cook.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.carousel-inner > div:nth-child(2) {
+  background-image: url(makeup.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.carousel-inner > div:last-child {
+  background-image: url(music.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+
+.carousel-inner {
+  position: relative;
+}
+.carousel-caption {
+  position: absolute;
+  transform: translateY(-30%);
+}
+.head {
+  font-size: 32px;
+  margin-bottom: 18px;
+}
+p {
+  font-size: 22px;
+  margin-bottom: 49px;
+}
+.btnclass {
+  background-color: #5900e7;
+  color: white;
+  font-size: 16px;
+  padding: 10px 30px;
+}
+.slide {
+  margin-bottom: 50px;
+}
+.alert {
+  margin-bottom: 16px;
+}
+.row {
+  margin-top: 16px;
+}
+.col {
+  padding: 10px 15px;
+  margin: 0;
+}
+.card-body {
+  padding: 0;
+  position: relative;
+}
+.card-img-top {
+  margin: 0;
+  padding: 0;
+}
+.card-title {
+  font-size: 18px;
+  color: #4a4a4a;
+  padding: 10px;
+}
+.card-text {
+  font-size: 13px;
+  color: #4a4a4a;
+  padding-left: 10px;
+}
+i {
+  font-size: 20px;
+  color: blueviolet;
+}
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}

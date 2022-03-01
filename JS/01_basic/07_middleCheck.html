@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>middle check</title>
+    <script>
+      function howMuchpay(where, when, pay) {
+        return `${where} 에서 근무한 시간은 총 ${when}시간이며 총 받을 pay는 ${
+          when * pay
+        }입니다.`;
+      }
+      function BMI(n, h, w) {
+        return `${n}의 bmi지수: ${(w / h ** 2) * 10000}`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>자바스크립트 Middle Check : 개발자 콘솔(F12)을 확인하세요</h1>
+    <h3>1. 아르바이트 급여 계산</h3>
+    <ol>
+      <li>아르바이트 장소 : 입력</li>
+      <li>근무시간 : 입력?</li>
+      <li>시간당pay: 입력?</li>
+      <li>
+        ${아르바이트 장소}에서 근무한 시간은 총 ${근무시간}이며 총 받을 pay는
+        ${얼마} 입니다.
+      </li>
+      <li>템플레이트를 활용하여 출력하며, 함수의 리턴을 사용할것</li>
+    </ol>
+    <h3>2. BMI 지수 계산</h3>
+    <ol>
+      <li>사용자 이름, 키, 몸무게 입력</li>
+      <li>템플레이트를 활용하여 출력하며, 함수의 리턴을 사용할것</li>
+    </ol>
+
+    <script>
+      //   let where = "공차";
+      //   let when = 8;
+      //   let pay = 8760;
+      console.log(howMuchpay("공차", 8, 8760));
+
+      //   let name = "min";
+      //   let weight = 56;
+      //   let height = 156;
+      console.log(BMI("lucky", 156, 55));
+    </script>
+  </body>
+</html>

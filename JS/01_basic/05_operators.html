@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>연산자</title>
+  </head>
+  <body>
+    <h1>자바스크립트 연산자: 개발자 콘솔 (F12)을 확인하세요</h1>
+    <ul>
+      <li>산술 연산자 : 사칙연산, 나머지연산, 제곱, 루트, 등등...</li>
+      <li>대입 연산자 : 자체 값을 연산 후 다시 대입, 재귀적 연산이라고도 함</li>
+      <li>비교 연산자 : 이상, 이하, 미만, 초과, 같다, 다르다 등등...</li>
+      <li>논리 연산자 : and, or, not and, not or</li>
+      <li>증감 연산자 : 일정 크기를 증가 / 감소</li>
+      <li>비트 연산자 : 비트 단위로 연산(웹 분야에서는 활용 빈도가 낮음)</li>
+      <li>그 외 연산자는 To be continue...</li>
+    </ul>
+    <script>
+      //사칙연산, 나머지연산
+      let num1 = 100;
+      let num2 = 5;
+      let resultAdd = num1 + num2;
+      console.log("resultAdd:", resultAdd);
+      let resultSubs = num1 - num2;
+      console.log("resultSubs:", resultSubs);
+      let resultMulti = num1 * num2;
+      console.log("rusultMulti:", resultMulti);
+      let resultDiv = num1 / num2;
+      console.log("resultDiv:", resultDiv);
+      let resultMod = num1 % num2;
+      console.log("resultMod:", resultMod);
+
+      console.log(2 ** 3); //8
+
+      // 대입연산자 : (=)도 대입연산자다!
+      num1 = num1 + num2;
+      console.log(num1); //105
+      num1 = num1 + num2;
+      console.log(num1); //110
+      num1 += num2;
+      console.log(num1); //115
+      num1 -= num2;
+      console.log(num1); //110
+      num1 -= num2;
+      console.log(num1); //105
+
+      num1 *= num2;
+      console.log(num1); //525
+      num1 = num1 * num2;
+      console.log(num1); //2625
+
+      num1 /= num2;
+      console.log(num1); //525
+
+      num1 **= num2;
+      console.log(num1);
+
+      // 증감 연산자
+      num1 = 100;
+      num1++; //호출한 후에 더하겠다는 소리 지금은 100임
+      console.log(num1); //101
+      num1--; //호출한 후에 빼겠다는 소리 지금은 101임
+      console.log(num1); //100
+
+      ++num1; //이미 연산은 됐음 호출 전에 이미 되어있음
+      console.log(num1);
+      --num1;
+      console.log(num1);
+
+      //비교 연산자 : 연산 결과는 무적권 boolean type
+      console.log(num1 > num2); // true
+
+      num1 = 100;
+      num2 = 100;
+      let num3 = "100";
+
+      //(같냐?라고 묻는거임)
+      console.log(num1 === num2); //true: 값과 type을 동시에 비교
+      console.log(num1 == num3); // true: 값만 비교
+      console.log(num1 === num3); // false : 숫자와 문자의 타입을 비교하게 됨
+
+      // 다른 값? 다른 값 및 타입? (다르냐?고 묻는거임)
+      console.log(num1 !== num2); //false: 값과 type을 동시에 비교
+      console.log(num1 != num3); // false: 값만 비교
+      console.log(num1 !== num3); // true : 숫자와 문자의 타입을 비교하게 됨
+
+      // 논리 연산자 : && (and 연산자), || (or 연산자) > true 나 false 리턴
+      // && 연산자는 양쪽이 모두 true 일 때만 true를 리턴
+      console.log(true && true); //true
+      console.log(true && false); //false > 왼쪽이 true이면 오른쪽 값을 리턴
+      console.log(false && true); //false > 왼쪽이 false이면 왼쪽 값을 리턴
+      console.log(false && false); //false > 왼쪽이 false이면 왼쪽 값을 리턴
+      console.log("----------------------------------------------------------");
+      //ex
+      console.log(num1 == num2 && num1 === num3 && num2 === num3);
+
+      // || 연산자는 양쪽 중 한개라도 true 이면 모두 true를 리턴
+      console.log(true || true); //true
+      console.log(true || false); //true > 왼쪽이 true이면 왼쪽 값을 리턴
+      console.log(false || true); //true > 왼쪽이 false이면 오른쪽 값을 리턴
+      console.log(false || false); //false > 왼쪽이 false이면 오른쪽 값을 리턴
+      //ex
+      console.log(num1 == num2 || num1 === num3 || num2 === num3);
+
+      // ! 연산자 : not 연산자(부정 연산자) > 결과값을 반대로 리턴
+      console.log(!true); //false
+      console.log(!false); //true
+      console.log(!!!false); //true;
+      //ex
+      console.log(!(num1 == num2 || !(num1 === num3)));
+
+      //middle Check
+      //1. 삼각형의 넓이와 사각형의 둘레길이를 구하기
+      // 알맞는 변수 이름을 사용하고 변수의 초기값은 100 이하의 수를 사용
+
+      let a = 4;
+      let h = 6;
+      let triangleS = (a * h) / 2;
+      console.log(triangleS);
+      let squareH1 = 3;
+      let squareH2 = 4;
+      let squareR = (squareH2 + squareH1) * 2;
+      console.log(squareR);
+
+      //3. 원금, 이자율, 저축한 기간(year기준)을 전달하면
+      // 최종 받을 금액을 출력해주는 함수를 만들어보세요
+      //최종 받을 금액은 15.4%의 이자소득세를 차감한 금액입니다.
+
+      function howMuchGetMoney(money, rate, years) {
+        let totalGet = money * (rate / 100) * years * (1 - 15.4 / 100) + money;
+        console.log(totalGet);
+      }
+      let money = 10000000;
+      let rate = 3;
+      let years = 5;
+      howMuchGetMoney(money, rate, years);
+    </script>
+  </body>
+</html>

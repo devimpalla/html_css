@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Template Print</title>
+    <script>
+      function printInfo(name, age) {
+        let myInfo = `myName: ${myName}, myAge: ${myAge}`;
+        console.log(myInfo);
+      }
+
+      function getInfo(name, age) {
+        return `myName: ${myName}, myAge: ${myAge}`;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>
+      자바스크립트 템플레이트를 활용한 출력 : 개발자 콘솔(F12)을 확인하세요
+    </h1>
+    <script>
+      let myName = "Min";
+      let myAge = "25";
+      let myInfo = `myName: ${myName}, myAge: ${myAge}`;
+
+      console.log("myName:", myName, ", myAge:", myAge);
+      console.log("myName: " + myName + ", myAge: " + myAge);
+      console.log(myInfo);
+
+      printInfo(myName, myAge);
+      let result = getInfo(myName, myAge);
+      console.log(result);
+    </script>
+  </body>
+</html>

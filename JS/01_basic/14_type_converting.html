@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Type Converting</title>
+  </head>
+  <body>
+    <h1>자바스크립트 형 변환 : F12</h1>
+    <script>
+      let str = "100"; //string > String()
+      let num = 10; //number > Number()
+      let bool = false; //boolean > Boolean()
+      let func = function () {
+        //function > X
+        return 1;
+      };
+      let obj = { k: "val1", k2: 12 }; // object > X
+      let undi; //undefined > X
+
+      // 자동 형변환 (내가 강제로 하는게 아니라 연산에 의해 그냥 변환 되는거)
+      let rs1 = str + num; //string
+      let rs2 = str / num; //number
+      if (1) {
+        console.log("print:", 1);
+      }
+      //강제 형변환
+      let rs3 = Boolean(1); // convert to true
+      let rs4 = Number(false); //convert to 0
+      let rs5 = String(true); //'true'
+      let rs6 = parseInt("1212"); //number
+      console.log(typeof rs6);
+      console.log(typeof rs2);
+      console.log(typeof rs1);
+    </script>
+  </body>
+</html>

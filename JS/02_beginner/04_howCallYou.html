@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>호칭 정리</title>
+  </head>
+  <body>
+    <h1>한국인의 호칭</h1>
+    나의 성별: <input type="text" id="myGen" /> 나의 나이:
+    <input type="number" id="myAge" /><br />
+    상대방의 성별: <input type="text" id="uGen" /> 상대방의 나이:
+    <input type="number" id="uAge" /><br />
+    <button type="button" id="btn">호칭 확인</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        let myGen = document.getElementById("myGen").value;
+        let myAge = document.getElementById("myAge").value;
+        let uGen = document.getElementById("uGen").value;
+        let uAge = document.getElementById("uAge").value;
+        //친구, 남동생, 여동생, 형, 누나, 오빠, 언니 호칭 판단하기
+        parseInt(myAge);
+        parseInt(uAge);
+
+        if (myGen == "여자") {
+          if (myAge < uAge) {
+            console.log("나는 여동생");
+          } else if (myAge > uAge) {
+            if (uGen == "여자") {
+              console.log("나는 언니");
+            } else {
+              console.log("나는 누나");
+            }
+          } else {
+            console.log("우린 친구");
+          }
+        } else {
+          if (myAge < uAge) {
+            console.log("나는 남동생");
+          } else if (myAge > uAge) {
+            if (uGen == "여자") {
+              console.log("나는 오빠");
+            } else {
+              console.log("나는 형");
+            }
+          } else {
+            console.log("우린 친구");
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

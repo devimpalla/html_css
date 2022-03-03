@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>High Row</title>
+  </head>
+  <body>
+    <h1>High Row Number</h1>
+    <h3>0~99의 번호를 입력하세요</h3>
+    <input type="number" id="myNum" min="0" max="99" />
+    <button type="button" id="btn">확인</button>
+    <script>
+      let comNum = Math.floor(Math.random() * 100); //0~99까지 숫자를 랜덤으로 배정
+      let num = 1;
+      document.getElementById("btn").addEventListener("click", function () {
+        let myNum = document.getElementById("myNum").value;
+        //컴퓨터의 숫자를 내가 예측합니다.
+        // 내 숫자가 컴퓨터의 숫자보다 크면 > 더 작은 수를 입력하세요!
+        // 내 숫자가 컴퓨터의 숫자보다 작으면 > 더 큰 수를 입력하세요!
+        //내가 총 시도한 횟수도 동시에 출력하기
+
+        if (myNum > comNum) {
+          console.log("더 작은 수를 입력하세요!");
+          //   console.log(`시도한 횟수 ${num++}`);
+        } else if (myNum < comNum) {
+          console.log("더 큰 수를 입력하세요!");
+          //   console.log(`시도한 횟수 ${num++}`);
+        } else {
+          console.log("맞췄습니다!");
+          //   console.log(`시도한 횟수 ${num++}`);
+        }
+
+        console.log(`시도한 횟수: ${num++}`);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>while 정복하기</title>
+  </head>
+  <body>
+    <h1>while 연습하기: F12</h1>
+    <ol>
+      <li>1~100 이하의 홀수를 모두 출력한 후 그 수들의 합을 출력해 보세요</li>
+      <li>임의의 숫자 2개 (a,b)를 받아 a의 b제곱을 구해보세요</li>
+      <li>
+        정수 n을 입력받아 n의 약수를 모두 출력하고 총 몇개의 약수가 있는지
+        출력해보세요
+      </li>
+      <li>
+        <ul>
+          <li>3자리의 양의 정수 1개를 입력받기: S</li>
+          <li>크기가 다른 1자리의 양의 정수 2개를 입력받기(x,y)</li>
+          <li>s안의 x와 y의 배수 갯수 구하기</li>
+        </ul>
+      </li>
+      숫자 a:
+      <input type="number" id="num1" /><br />
+      숫자 b:
+      <input type="number" id="num2" />
+      <button type="button" id="btn">제곱구하기</button
+      ><br />
+
+      정수 n:
+      <input type="number" id="num3" />
+      <button type="button" id="btn1">약수 출력</button>
+
+      특정정수 s:
+      <input type="number" />
+      <button type="button" id="btn2">약수 출력</button>
+    </ol>
+    <script>
+      let i = 0;
+      let n = 0;
+      while (i < 100) {
+        if (i % 2 == 1) {
+          console.log(i);
+          n = n + i;
+        }
+        i++;
+      }
+      console.log(n);
+      console.log("------------------------------------------------------");
+      document.getElementById("btn").addEventListener("click", function () {
+        let a = parseInt(document.getElementById("num1").value);
+        let b = parseInt(document.getElementById("num2").value);
+        let p = 0;
+        let result = 1;
+        while (p < b) {
+          result = result * a; // result *= a;
+          j++;
+        }
+        console.log(`${a}의 ${b}제곱은 ${result}입니다.`);
+      });
+      console.log("------------------------------------------------------");
+      document.getElementById("btn1").addEventListener("click", function () {
+        let n = parseInt(document.getElementById("num3").value);
+        let j = 0;
+        let cnt = 0;
+        while (j < n + 1) {
+          if (n % j == 0) {
+            cnt++;
+            console.log(`${n}의 약수 : ${j}`);
+          }
+          j++;
+        }
+        console.log(`${n}의 약수의 총 갯수는 ${cnt}개 입니다.`);
+      });
+      console.log("-------------------------------------------------------");
+      // 3자리의 양의 정수 1개를 입력받기: S</li>
+      // 크기가 다른 1자리의 양의 정수 2개를 입력받기(x,y)
+      // s안의 x와 y의 배수 갯수 구하기
+
+      let s = 322;
+      let x = 2;
+      let y = 7;
+      let p = 1;
+      let cnt_x = 0;
+      let cnt_y = 0;
+      let cnt_xy = 0;
+
+      while (s >= p) {
+        if (p % x == 0) {
+          cnt_x++;
+        }
+        if (p % y == 0) {
+          cnt_y++;
+        }
+        if (p % x == 0 && p % y == 0) {
+          cnt_xy++;
+        }
+        p++;
+      }
+      console.log(`x의 배수 개수: ${cnt_x}개`);
+      console.log(`y의 배수 개수: ${cnt_y}개`);
+      console.log(`xy의 공배수 개수: ${cnt_xy}개`);
+    </script>
+  </body>
+</html>

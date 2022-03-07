@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>조건문까지 복습하기 문제</title>
+  </head>
+  <body>
+    <h1>1. 아래의 조건을 참고 및 분석하여 코드를 작성</h1>
+    <ul>
+      <li>양의 정수 2개를 입력받기</li>
+      <li>1:덧셈 / 2:뺄셈 / 3:곱셈 / 4:나눗셈 / 5:나머지 > 메뉴</li>
+      <li>계산과정 및 결과 출력 > ex) 3 + 5 = 8</li>
+    </ul>
+    숫자 입력1 :<input type="number" id="num1" /> 연산자:
+    <input type="text" id="opt" /> 숫자 입력2 :<input type="number" id="num2" />
+    <button type="button" id="btn">결과</button>
+    <script>
+      document.getElementById("btn").addEventListener("click", function () {
+        let num1 = parseInt(document.getElementById("num1").value);
+        let opt = document.getElementById("opt").value;
+        let num2 = parseInt(document.getElementById("num2").value);
+        function calaulate(n1, op, n2) {
+          if (op == "+") {
+            return n1 + n2;
+          } else if (op == "-") {
+            return n1 - n2;
+          } else if (op == "*") {
+            return n1 * n2;
+          } else if (op == "/") {
+            return n1 / n2;
+          } else {
+            return n1 % n2;
+          }
+        }
+        console.log(`${num1}${opt}${num2} = ${calaulate(num1, opt, num2)}`);
+        let result = 0;
+        switch (opt) {
+          case "+":
+            result = num1 + num2;
+            break;
+          case "-":
+            result = num1 - num2;
+            break;
+          case "*":
+            result = num1 * num2;
+            break;
+          case "/":
+            result = num1 / num2;
+            break;
+          case "%":
+            result = num1 % num2;
+            break;
+        }
+        console.log(`${num1}${opt}${num2} = ${result}`);
+      });
+    </script>
+  </body>
+</html>

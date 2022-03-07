@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For문을 문자열에 적용해보기</title>
+  </head>
+  <body>
+    <h1>자바스크립트 For문 with 문자열:F12</h1>
+    <ul>
+      <li>index의 시작이 0인점을 for의 i값과 매칭하여 사용하는 방식이 흔함</li>
+      <li>문자열의 index를 활용한 메서드 들과의 조합도 다양하게 활용가능</li>
+      <li>
+        데이터의 대부분이 문자열인것을 감안하면 확실하게 이해를 해두는 것이
+        중요함
+      </li>
+    </ul>
+    <script>
+      //아래에 제시된 para 변수의 문자열 데이터 안에 내가 찾고자 하는 알파벳(x)가 몇개가 존재하는지
+      //알려주는 함수를 만들어 x의 총 포함갯수를 리턴하여 출력하세요
+      let s = 0;
+      let t = 0;
+      let para =
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam tellus, facilisis non tellus consequat, commodo accumsan metus. Ut sodales tincidunt nulla et ornare. Vestibulum in porta metus. Vestibulum in mi feugiat, tristique tortor quis, mattis neque. Pellentesque tristique consectetur lacus non pharetra. Donec mollis, augue a sollicitudin ullamcorper, nisi justo efficitur odio, et maximus erat tortor id tellus. Donec eu lectus pretium, tincidunt dui at, mattis lorem. Cras in varius dui.";
+      for (let i = 0; i < para.length; i++) {
+        if (para[i] == "r") {
+          t++;
+        }
+      }
+      console.log(t);
+      //단어의 앞과 끝이 같은 글자인지 판단내리기
+      // 테스트 코드
+      let word = "";
+
+      function isPalindrome(word) {
+        {
+          for (let i = 0; i < word.length; i++)
+            if (word.charAt(i) != word.charAt(word.length - 1 - i)) {
+              return false;
+            }
+        }
+        return true;
+      }
+      console.log(isPalindrome("토마토")); // true
+      console.log(isPalindrome("기러기")); // true
+      console.log(isPalindrome("centres")); // false
+      console.log(isPalindrome("ajax")); // false
+      console.log(isPalindrome("racecar")); //true
+      console.log(isPalindrome("jasmins")); // false
+      console.log(isPalindrome("kayak")); // true
+    </script>
+  </body>
+</html>

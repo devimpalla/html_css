@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>배열과 객체 정렬 연습</title>
+  </head>
+  <body>
+    <h1>자바스크립트 배열과 객체 정렬 연습</h1>
+    <h3>Quiz 1.</h3>
+    <ul>
+      <li>1~45까지의 6개의 숫자를 랜덤으로 생성한 후 순차 정렬(중복허용)</li>
+      <li>
+        6개의 숫자 중 중복 되는 숫자들을 검사 한 후 중복되는 숫자 중 뒤에 나온
+        숫자를 제거
+      </li>
+      <li>
+        다시 랜덤 숫자 한개를 만들어 기존의 배열에 저장되어 있는 숫자와 중복검사
+        후
+      </li>
+      <li>중복되지 않으면 배열에 추가하고, 그 배열을 다시 순차정렬</li>
+    </ul>
+    <script>
+      let arr_1 = [];
+      for (let i = 0; i < 6; i++) {
+        let random = Math.floor(Math.random() * 45) + 1;
+        arr_1.push(random);
+        arr_1.sort(function (a, b) {
+          return a - b;
+        });
+      }
+      console.log("순차정렬", arr_1);
+
+      let removeArr = [];
+      for (let i = 0; i < arr_1.length - 1; i++) {
+        for (let j = i + 1; j < arr_1.length; j++) {
+          if (arr_1[i] == arr_1[j]) {
+            removeArr.push(j);
+          }
+        }
+      }
+
+      if (removeArr.length > 0) {
+        arr_1.splice(removeArr[0], removeArr.length);
+        console.log("중복제거", arr_1);
+
+        let random2;
+        function makeRandom() {
+          random2 = Math.floor(Math.random() * 45) + 1;
+          checkDuple(random2);
+        }
+        makeRandom(); // function 만들었고 실행해야지?? 그래야 숫자가 만들어지지
+
+        function checkDuple(random2) {
+          for (let elem of arr_1) {
+            if (elem == random2) {
+              // 같으면 멈추고 랜덤 숫자 1개를 다시 불러와야 함
+              console.log("중복발생", arr_1);
+              makeRandom();
+              break;
+            }
+          }
+        } // 중복된 것이 없으면 브레이크가 안걸려서 랜덤 넘버를 배열에 추가한다
+
+        arr_1.push(random2);
+        console.log("재추가", arr_1);
+        arr_1.sort(function (a, b) {
+          return a - b;
+        });
+        console.log("재추가 순차정렬", arr_1);
+      }
+
+      //   arr_1.push(random2);
+      //   console.log(arr_1);
+      //   arr_1.sort(function (a, b) {
+      //     return a - b;
+      //   });
+      //   console.log(arr_1);
+      //   for (let i = 0; i < arr_1.length; i++) {
+      //     for (let j = 0; j < arr_1.length; j++) {
+      //       if (arr_1[i] == arr_1[j] && i !== j) {
+      //         console.log(arr_1.splice(j, 1));
+      //       }
+      //     }
+      //   }
+      //   console.log(arr_1);
+    </script>
+  </body>
+</html>

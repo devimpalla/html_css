@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>화살표 함수</title>
+  </head>
+  <body>
+    <h1>자바스크립트 화살표 함수 : F12</h1>
+    <ul>
+      <li>
+        함수표현식을 더 간단하게 =>(화살표) 지시자를 사용하여 코드량을 줄임
+      </li>
+      <li>가독성이 낮지만 최근 많이 사용하는 추세</li>
+      <li>
+        변수명, 파라미터, 리턴의 형태만을 가지고 함수 표현식을 구성할 수 있음
+      </li>
+    </ul>
+    <script>
+      let makeSum = function (a, b) {
+        // a *=2;
+        // b *=3;
+        return a + b;
+      };
+      console.log(makeSum(2, 3));
+
+      let makeSumArrow = (a, b) => a + b; // a,b를 파라미터로 받고 a+b를 돌려준다
+      console.log(makeSumArrow);
+
+      let makeSumArrow2 = (a, b) => {
+        a *= 2;
+        b *= 3;
+        return a + b;
+      };
+      let powerNum = (num) => num * num;
+      console.log(powerNum(10));
+
+      let getJob = () => {
+        return { job: "소프트웨어 엔지니어" };
+      };
+      console.log(getJob().job); //객체안에 프로퍼티 접근
+
+      let getJob2 = () => ({ job: "소프트웨어 엔지니어" });
+      //{{job:'소프트웨어 엔지니어'}};
+      // 이건 에러뜸 중괄호가 반복되서 객체를 리턴 해주려면 위에꺼를 쓰거나 그냥 () 괄호로 바꿔주기
+
+      let sumArr = (a, b, ...etc) => {
+        // console.log(arguments.toString()); //error
+        console.log(a, b, etc); //레스트파라미터 가능
+      };
+      // sumNums(1, 2, 3, 4, 5); //애로우 펑션에서는 아규먼츠가 작동 안함
+
+      let sumNums2 = (a, b, c = a + b) => {
+        console.log(a, b, c); //옵셔널파라미터 가능
+      };
+      sumNums2(10, 50);
+    </script>
+    <button type="button" id="btn">버튼을 클릭해보자</button>
+    <button type="button" id="btn2" onclick="myFunction();">
+      버튼을 또 클릭해보자
+    </button>
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        console.log("You got a Star!");
+        //이벤트도 애로우펑션 가능합니더
+      });
+      document.getElementById("btn2").onclick = () => {
+        console.log("You got a Star again!");
+      }; //웬만하면 onclick 사용하지마셈
+    </script>
+  </body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+    <link rel="stylesheet" href="" />
+    <style></style>
+  </head>
+  <body>
+    아래의 배열에 있는 이름의 갯수를 객체형식으로 저장한 후 출력해 주세요; let
+    members = ['김아연', '김태형', '김태형', '주혁중', '손필규', '김태형',
+    '손필규', '김태형', '김호중', '주혁중', '김태형', '임정민', '김아연',
+    '김태형', '김호중', '손필규', '손필규', '임정민', '김태형', '김태형',
+    '김태형', '손필규', '손필규', '김태형', '김아연', '김태형', '김호중',
+    '김태형', '손필규', '임정민']; // 결과 출력 예시 // {'김태형':15, '손필규':
+    9,....}
+    <script>
+      let members = [
+        "김아연",
+        "김태형",
+        "김태형",
+        "주혁중",
+        "손필규",
+        "김태형",
+        "손필규",
+        "김태형",
+        "김호중",
+        "주혁중",
+        "김태형",
+        "임정민",
+        "김아연",
+        "김태형",
+        "김호중",
+        "손필규",
+        "손필규",
+        "임정민",
+        "김태형",
+        "김태형",
+        "김태형",
+        "손필규",
+        "손필규",
+        "김태형",
+        "김아연",
+        "김태형",
+        "김호중",
+        "김태형",
+        "손필규",
+        "임정민",
+      ];
+      let person = {};
+      members.forEach(function (element) {
+        if (person[element]) {
+          //있는경우 증가로직
+          person[element] += 1;
+        } else {
+          //없는경우 1세팅
+          person[element] = 1;
+        }
+      });
+      console.log(person);
+      //   let taehyeong = members.filter(function (currentValue) {
+      //     return currentValue === "김태형";
+      //   });
+      //   console.log(taehyeong);
+      //   let hojung = members.filter(function (currentValue) {
+      //     return currentValue === "김호중";
+      //   });
+      //   console.log(hojung);
+      //   let pilgyu = members.filter(function (currentValue) {
+      //     return currentValue === "손필규";
+      //   });
+      //   console.log(pilgyu);
+      //   let jeongmin = members.filter(function (currentValue) {
+      //     return currentValue === "임정민";
+      //   });
+      //   console.log(jeongmin);
+      //   let ahyeon = members.filter(function (currentValue) {
+      //     return currentValue === "김아연";
+      //   });
+      //   console.log(ahyeon);
+      //   let hyukjung = members.filter(function (currentValue) {
+      //     return currentValue === "주혁중";
+      //   });
+      //   console.log(hyukjung);
+      //   console.log(
+      //     `김태형:${taehyeong.length} 김호중:${hojung.length}, 손필규:${pilgyu.length}, 임정민:${jeongmin.length}, 김아연:${ahyeon.length}, 주혁중:${hyukjung.length}`
+      //   );
+    </script>
+  </body>
+</html>

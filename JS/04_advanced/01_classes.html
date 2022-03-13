@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스</title>
+  </head>
+  <body>
+    <h1>자바스크립트 클래스 : F12</h1>
+    <ul>
+      <li>추상화 작업의 대표적인 코드 결과물</li>
+      <li>객체를 생성하기 전 설계도를 만든다는 개념으로 접근</li>
+      <li>개념적인 분류를 통해 필요한 속성(상태)값과 기능들을 정의함</li>
+      <li>
+        클래스를 통해 생성된 객체는 인스턴스라고 불리우며 데이터 관리의 중심적인
+        역할을 한다
+      </li>
+    </ul>
+    <script>
+      class BankAccount {
+        // 은행계좌 클래스
+        constructor(name, money) {
+          // 생성자 : 예금주 이름과 최초 잔액을 전달 받아 초기화
+          this.name = name;
+          this.balance = money;
+        }
+        deposit(amount) {
+          // 입금액을 전달 받아 잔액을 증가시키는 메서드
+          this.balance += amount;
+        }
+        withdraw(amount) {
+          // 출금액을 전달 받아 잔액을 감소시키는 메서드
+          this.balance -= amount;
+        }
+        transfer(amount, anotherAccount) {
+          // 이체액과 상대방의 계좌를 전달받아
+          // 이체액만큼 잔액을 감소시키고
+          // 상대방 계좌의 잔액을 이체액 만큼 증가시키는 메서드
+          this.balance -= amount;
+          anotherAccount.balance += amount;
+        }
+      }
+
+      let myAcc = new BankAccount("Min", 100000000);
+      console.log(myAcc.balance); // 1억의 잔고
+
+      let urAcc = new BankAccount("Joe", 10000000);
+      myAcc.deposit(100000000);
+      console.log(myAcc.balance); //2억으로 증가되었음
+
+      urAcc.withdraw(1000000);
+      console.log(urAcc); //900만원으로 감소
+
+      myAcc.transfer(100000000, urAcc); // 내계좌에서 1억 이체
+      console.log(myAcc);
+      console.log(urAcc);
+    </script>
+  </body>
+</html>

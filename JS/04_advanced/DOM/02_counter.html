@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter 만들기</title>
+    <link rel="stylesheet" href="" />
+    <style>
+      #box {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>버튼을 활용한 카운터 만들기</h1>
+    <div id="box">
+      <h4 id="print"></h4>
+    </div>
+    <button type="button" id="plus">+</button>
+    <button type="button" id="minus">-</button>
+  </body>
+  <script>
+    function counter() {
+      return document.getElementById("print").innerText;
+    }
+    document.getElementById("plus").addEventListener("click", function () {
+      let currNum = parseInt(counter());
+      currNum++;
+      document.getElementById("print").innerText = currNum;
+    });
+    document.getElementById("minus").addEventListener("click", function () {
+      let currNum = parseInt(counter());
+      currNum--;
+      document.getElementById("print").innerText = currNum;
+    });
+    document.getElementById("print").innerText = 0;
+  </script>
+</html>

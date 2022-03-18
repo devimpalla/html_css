@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>game</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .wrapper {
+        width: 800px;
+        height: 350px;
+        background-color: burlywood;
+      }
+      .box {
+        display: inline-block;
+        width: 85px;
+        height: 80px;
+        margin: 10px 5px;
+        padding: 27px;
+        background-color: blueviolet;
+        text-align: center;
+      }
+      .buttonwrapper {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="button" id="start">숫자생성</button>
+    <div class="wrapper">
+      <div class="box">2</div>
+      <div class="box">2</div>
+      <div class="box">22</div>
+      <div class="box">2</div>
+      <div class="box">2</div>
+      <div class="box">2</div>
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box">1</div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box">1</div>
+      <div class="box">2</div>
+      <div class="box">1</div>
+      <div class="box">1</div>
+      <div class="buttonwrapper">
+        <button type="button" id="odd">짝수</button>
+        <button type="button" id="even">홀수</button>
+      </div>
+    </div>
+    <script>
+      let arr = [];
+      function makeRandomNumber() {
+        arr = new Set();
+        while (arr.size < 24) {
+          let random = Math.floor(Math.random() * 100) + 1;
+          arr.add(random);
+        }
+      }
+
+      document
+        .getElementById("start")
+        .addEventListener("click", makeRandomNumber());
+
+      let box = document.getElementsByClassName("box");
+      box = box.innerText;
+      console.log(box);
+      if (box % 2 == 0) {
+        document
+          .querySelectorAll(".box")
+          .setAttribute("style", "background-Color: white;");
+      }
+    </script>
+  </body>
+</html>

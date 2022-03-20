@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>level 1</title>
+  </head>
+  <body>
+    인원수 입력 > <input type="number" id="students" />
+    <button type="button" id="printInputs">입력란 출력</button>
+    <button type="button" id="printResult">입력결과 출력</button>
+    <div id="printInputsArea">입력란 출력 영역</div>
+    <div id="printResultArea">입력 결과 출력 영역</div>
+    <script>
+      document.getElementById("printInputs").addEventListener("click", () => {
+        document.getElementById("printInputsArea").innerHTML = "";
+        document.getElementById("printResultArea").innerHTML = "";
+
+        let students = parseInt(document.getElementById("students").value);
+
+        if (students < 1) {
+          alert("양의 정수만 입력가능!");
+        } else {
+          printInputs(students);
+        }
+      });
+      document.getElementById("printResult").addEventListener("click", () => {
+        const inputsNames = document.querySelectorAll(
+          "#printInputsArea input[type=text]"
+        );
+        const inputsAges = document.querySelectorAll(
+          "#printInputsArea input[type=number]"
+        );
+        //console.log(inputs);
+        let students = parseInt(document.getElementById("students").value);
+
+        let str = "<ul>";
+        for (let i = 0; i < students; i++) {
+          str += `<li>학생 ${i + 1} 이름 > `;
+          str += `${inputsNames[i].value}`;
+          str += `나이 > ${inputsAges[i].value}</li>`;
+        }
+        str += "</ul>";
+        document.getElementById("printResultArea").innerHTML = str;
+      });
+      function printInputs(stds) {
+        let str = "<ul>";
+        for (let i = 0; i < stds; i++) {
+          str += `<li>학생 ${i + 1} 이름 > `;
+          str += `<input type='text'> 나이 > <input type = 'number'></li>`;
+        }
+        str += "</ul>";
+        document.getElementById("printInputsArea").innerHTML = str;
+      }
+    </script>
+  </body>
+</html>

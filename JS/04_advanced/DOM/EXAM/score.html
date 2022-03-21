@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>성적 처리</title>
+<style>
+@import url(score.css);
+</style>
+<script src="score.js"></script>
+</head>
+<h3>성적처리</h3>
+<hr>
+<body>
+	<table>
+		<thead><tr>
+				<th>이름</th><th>C#</th><th>Html</th><th>Java</th>
+				<th>합</th><th>평균</th><th>석차</th></tr>
+		</thead>
+		<tbody><tr>
+				<td><input  type="text" placeholder=이름 value=""id="name1" onkeyup="output()"></td>
+				<td><input type="text" placeholder=점수 value="0" id="namec1" onkeyup="output()"></td>
+				<td><input id="name1h" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input id="name1j" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input class="sum" onkeyup="output()" id="name1sum" type="text" value=""></td> 
+				<td><input class="avg" onkeyup="output()" id="name1avg" type="text" value=""></td> 
+				<td><input class="rank" onkeyup="output()" id="name1rank" type="text" value=""></td> 
+			</tr>
+			<tr>
+				<td><input  type="text" placeholder=이름 value=""id="name2" onkeyup="output()"></td>
+				<td><input  type="text" placeholder=점수 value="0"id="namec2" onkeyup="output()"></td>
+				<td><input id="name2h" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input id="name2j" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input class="sum" onkeyup="output()" id="name2sum" type="text" value=""></td> 
+				<td><input class="avg" onkeyup="output()" id="name2avg" type="text" value=""></td> 
+				<td><input class="rank" onkeyup="output()" id="name2rank" type="text" value=""></td> 
+			</tr>
+			<tr>
+				<td><input  type="text" placeholder=이름 value=""id="name3" onkeyup="output()"></td>
+				<td><input type="text" placeholder=점수 value="0" id="namec3" onkeyup="output()"></td>
+				<td><input id="name3h" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input id="name3j" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input class="sum" onkeyup="output()" id="name3sum" type="text" value=""></td> 
+				<td><input class="avg" onkeyup="output()" id="name3avg" type="text" value=""></td> 
+				<td><input class="rank"onkeyup="output()" id="name3rank" type="text" value=""></td> 
+			</tr>
+			<tr>
+				<td><input  type="text" placeholder=이름 value=""id="name4" onkeyup="output()"></td>
+				<td><input  type="text" placeholder=점수 value="0"id="namec4" onkeyup="output()"></td>
+				<td><input id="name4h" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input id="name4j" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input class="sum" onkeyup="output()" id="name4sum" type="text" value=""></td> 
+				<td><input class="avg"onkeyup="output()" id="name4avg" type="text" value=""></td> 
+				<td><input class="rank" onkeyup="output()" id="name4rank" type="text" value=""></td> 
+			</tr>
+			<tr>
+				<td><input  type="text" placeholder=이름 value=""id="name5" onkeyup="output()"></td>
+				<td><input  type="text" placeholder=점수 value="0"id="namec5" onkeyup="output()"></td>
+				<td><input id="name5h" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input id="name5j" onkeyup="output()" type="text" placeholder=점수 value="0"></td>
+				<td><input class="sum"onkeyup="output()" id="name5sum" type="text" value=""></td> 
+				<td><input class="avg" onkeyup="output()" id="name5avg" type="text" value=""></td> 
+				<td><input class="rank"onkeyup="output()" id="name5rank" type="text" value=""></td> 
+			</tr>
+			<tr><th>총점</th>
+			<td><input id="csum" onkeyup="output()" type="text" value=""></td>
+			<td><input id="jsum" onkeyup="output()" type="text" value=""></td>
+			<td><input id="hsum" onkeyup="output()" type="text" value=""></td>
+			<td><input id="total" onkeyup="output()" type="text" value=""></td>
+			</tr>
+		</tbody>
+</table>
+</body>
+</html>

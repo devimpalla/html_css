@@ -1,0 +1,22 @@
+@charset "UTF-8";
+container{
+	display: flex;
+	align-items:center;
+}
+body {
+  padding: 0;
+  margin: 0;
+  background:linen;
+  text-align : center;	
+
+}
+h3{
+	text-align : center;
+}
+.sum{color:blue;}
+.rank{color:red;}
+.avg{color:pink;}
+table{border:1px solid; margin-left:auto; margin-right:auto;}
+thead th, tbody th{background-color:skyblue;color:black;}
+th,td{border:1px solid;}
+input{width:80px;height:30px;text-align:right;}

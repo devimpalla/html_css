@@ -1,0 +1,6 @@
+#Database Properties Text
+#Wed Nov 17 21:18:04 KST 2021
+driver-class=jdbc.mariadb.jdbcapi.DriverSpy
+password=mariadb
+jdbcUrl=jdbc\:mariadb\://localhost\:3307/java
+username=javauser

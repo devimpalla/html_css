@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>Database Properties XML</comment>
+<entry key="driver-class">jdbc.mariadb.jdbcapi.DriverSpy</entry>
+<entry key="password">mariadb</entry>
+<entry key="jdbcUrl">jdbc:mariadb://localhost:3307/java</entry>
+<entry key="username">javauser</entry>
+</properties>
